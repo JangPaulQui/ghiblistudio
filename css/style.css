@@ -1,0 +1,210 @@
+/* 공통 */
+.innerBox {
+    max-width: 1600px; 
+    /* background-color: rgba(255,0,0,0.3); */
+    margin: 0 auto;
+    padding: 0 2em;
+    position: relative;
+}
+
+/* 없애기 */
+.ham {display: none;}
+
+/* 1. header */
+header .innerBox {display: flex; justify-content: flex-start; align-items: center ;z-index:999;}
+
+header {width: 100%; height: 0;}
+
+header img {margin-top: 5px;}
+
+header #nav {display: flex;}
+
+header #nav > li {margin-left:60px; padding:0 20px;}
+
+header #nav > li a {color: #fff; font-size: 16px;}
+
+header .rightGnb {position: absolute; right: 0; padding-right:20px;}
+
+/* 2. #mainBanner */
+#mainBanner {width: 100%; height: calc(100vh - 75px); min-height: 600px;}
+
+.bannerWrap {height: 100%; overflow: hidden;}
+
+.banner {width: 300%; height: 100%; display: flex;}
+
+.banner > li {height: 100%; flex: 1; text-align: center; background-size: cover; background-position: center center;}
+
+.banner > .b1 {background-image: url(../images/pc-main.png);}
+
+.banner > .b2 {background-image: url(../images/pc-main1.png);}
+
+.banner > .b3 {background-image: url(../images/pc-main2.png);}
+
+.banner .wordWrap {
+    max-width: 100%; 
+    position:relative;
+    padding: 20em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+}
+
+.banner .title {
+    font-size: 40px; 
+    font-weight: bold; 
+    color: #fff; 
+    text-shadow: 1px 1px 1px #292929;
+    line-height: 2;
+}
+
+.banner p {
+    font-size: 16px;
+    display: block;
+    color: #fff;
+    text-shadow: 1px 1px 1px #292929;
+    word-break: keep-all;
+    word-wrap: break-word;
+    margin-bottom: 2rem;
+}
+
+.banner button {
+    position: relative;
+    top: 46%;
+    width: 163px;
+    height: 39px;
+    border: 2px solid #fff;
+    background: none;
+    box-shadow: 1px 1px 1px #ccc;
+}
+
+.banner button:hover {background: #fff;}
+
+.banner button:hover a {color: #000; font-weight: bold;}
+
+.banner button a {
+    font-size: 16px;
+    color: #fff;
+}
+
+.arrowBtn>.leftBtn {
+    display: block; 
+    width: 32px; 
+    height: 30px; 
+    background: rgba(0,0,0,0.6);
+    position: absolute; 
+    top: 50%; 
+    left: 6%; 
+}
+
+.arrowBtn>.leftBtn:hover {
+    background: #000;
+}
+
+.arrowBtn>.leftBtn img {padding: 3px;}
+
+.arrowBtn>.rightBtn {
+    display: block; 
+    width: 32px; 
+    height: 30px; 
+    background: rgba(0,0,0,0.6);
+    position: absolute; 
+    top: 50%; 
+    right: 6%; 
+}
+
+.arrowBtn>.rightBtn:hover {
+    background: #000;
+}
+
+.arrowBtn>.rightBtn img {padding: 3px;}
+
+.pager { 
+    position: absolute; bottom: 10em; left: 50%; transform: translateX(-50%); 
+    display: flex; column-gap: 24px; opacity: 0.9;
+}
+
+.pager > li > a {
+    display: block; width: 16px; height: 16px; background: #fff; 
+    text-align: center; text-indent: -9999px; border-radius: 50%;
+}
+
+.pager > .active > a {background: rgba(0,0,0,0.9); color: #fff;}
+
+/* footer */
+footer {width: 100%; background: #292929; z-index:999;}
+
+footer .innerBox {display: flex; justify-content: space-between; align-items: center; height: 75px; z-index:999;}
+
+footer .footRight {display: flex; align-items: center; column-gap: 10px; padding-top:5px;}
+
+footer .footRight img{width: 40px; }
+
+footer address {font-style: normal;}
+
+footer p {color: #fff; font-size: 12px;}
+
+
+
+
+/****************************** responsive ******************************/
+
+/****************************** 1279px ******************************/
+@media screen and (max-width: 1279px){
+    /* 사이즈 변환 */
+    header .innerBox {padding: 0 2em;}
+
+    .arrowBtn>.leftBtn {
+        left: 3%; 
+    }
+
+    .arrowBtn>.rightBtn {
+        right: 3%; 
+    }
+
+    /* #mainBanner {background-position: center; } */
+
+    .banner .wordWrap {
+        width: 900px; 
+    }
+
+    /* 나타내기 */
+    .ham {display: block; position: absolute; right: 0; padding: 0 2em;}
+
+    /* 없애기 */
+    header #nav {display: none;}
+
+    header .rightGnb {display: none;}
+}
+
+/****************************** 1020px ******************************/
+@media screen and (max-width: 1020px){
+    /* 사이즈 변환 */
+    .banner p {word-break: break-all;}
+
+    .banner .wordWrap {max-width: 100%;}
+    /* 나타내기 */
+
+    /* 없애기 */
+}
+
+/****************************** 767px ******************************/
+@media screen and (max-width: 767px){
+    /* 사이즈 변환 */
+    /* 나타내기 */
+    /* 없애기 */
+}
+
+/****************************** 640px ******************************/
+@media screen and (max-width: 640px){
+    /* 사이즈 변환 */
+    /* 나타내기 */
+    /* 없애기 */
+}
+
+/****************************** 480px ******************************/
+@media screen and (max-width: 480px){
+    /* 사이즈 변환 */
+    /* 나타내기 */
+    /* 없애기 */
+}
