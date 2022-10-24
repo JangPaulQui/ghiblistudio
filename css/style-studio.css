@@ -1,6 +1,6 @@
 @import url("./style.css");
 @import url("./common.css");
-.innerBox {background-color: rgba(255,0,0,0.3); height: 100%;}
+.innerBox { height: 100%;}
 
 /* 1. header */
 header {background:#73D7F4; height: 50px;}
