@@ -1,0 +1,49 @@
+@import url("./style.css");
+@import url("./common.css");
+.innerBox { height: 100%;}
+
+/* 1. header */
+header {background:#73D7F4; height: 50px;}
+
+/* 2. #container */
+#container {background: #C9F3FF; height: 100vh;}
+
+#container innerBox {position: relative; display: flex;}
+
+#container .conLeft{width: 30%;}
+
+#container .conLeft img {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%);
+    padding-left: 2em;
+}
+
+#container .contentWrap {display: flex;}
+
+#container .conRight  .textWrap {
+    position: absolute; 
+    right: 0; 
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40%;
+    padding-right: 2em;
+    text-align: left;
+}
+
+#container .conRight  .textWrap  h2 {
+    font-size: 50px;
+}
+
+#container .conRight  .textWrap  p {
+    font-size: 2em; 
+    font-weight: bold;  
+    word-break: break-all; 
+    padding-bottom: 20px;
+}
+
+#container .conRight  .textWrap  span {font-size: 1.6em;}
+
+/* 3. footer */
+footer {position: relative; bottom: 0;}

@@ -1,0 +1,21 @@
+@import url("./style.css");
+@import url("./common.css");
+
+/* 1. header */
+header {background:#73D7F4; height: 50px;}
+/* 2. #container */
+#container {height: 100%;}
+
+#container .innerBox {
+
+}
+
+#container .con-wrap {
+    display: flex;
+}
+
+#container .img-wrap {
+    width: 350px;
+    height: 150px;
+}
+/* 3. footer */
