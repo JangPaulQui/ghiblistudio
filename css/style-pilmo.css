@@ -1,21 +1,103 @@
 @import url("./style.css");
 @import url("./common.css");
 
+img {vertical-align: top;}
+
 /* 1. header */
 header {background:#73D7F4; height: 50px;}
+
 /* 2. #container */
-#container {height: 100%;}
-
-#container .innerBox {
-
+#container {
+    width: 100%;
+    margin: 0 auto;
 }
 
-#container .con-wrap {
-    display: flex;
+#container ul {font-size: 0;}
+
+#container ul > li {
+    display: inline-block;
+    vertical-align: top;
+    width: 33.3%;
 }
 
-#container .img-wrap {
-    width: 350px;
-    height: 150px;
+#container ul > li > a {
+    display: block;
+    width: auto;
+    margin: 5px;
 }
+
+#container ul > li > a .screen {
+    position: relative;
+    overflow: hidden;
+}
+
+ul > li > a .screen .top {
+    position:absolute;
+    bottom: 150%;
+    left: 30px;
+    z-index: 2;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 900;
+    transition: all .35s;
+}
+
+ul > li > a .screen .bottom {
+    position: absolute;
+    top: 150%;
+    left: 30px;
+    z-index: 2;
+    color: #fff;
+    font-size: 12px;
+    transition: all .35s;
+}
+
+ul > li > a .screen img {
+    width: 100%;
+}
+
+ul > li > a .screen::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+    opacity: 0;
+    transition: all .35s;
+}
+
+ul > li > a:hover .screen::after {
+    opacity: 1;
+}
+
+ul > li > a:hover .top {
+    bottom: 52%;
+}
+ul > li > a:hover .bottom {
+    top: 52%;
+}
+
+.page {
+    position: relative;
+    text-align: center;
+}
+
+.page a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+}
+
+.page a:hover {
+    background: #73D7F4;
+    color: #fff;
+}
+
 /* 3. footer */
+footer {position: relative; width: 100%; bottom: 0; margin-top: 5px;}
