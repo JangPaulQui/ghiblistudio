@@ -20,9 +20,9 @@ header {background:#73D7F4; height: 50px;}
     padding-left: 2em;
 }
 
-#container .contentWrap {display: flex;}
+#container .contentWrap {}
 
-#container .conRight  .textWrap {
+#container .conRight .textWrap {
     position: absolute; 
     right: 0; 
     top: 50%;
@@ -47,3 +47,66 @@ header {background:#73D7F4; height: 50px;}
 
 /* 3. footer */
 footer {position: relative; bottom: 0;}
+
+
+
+
+/****************************** responsive ******************************/
+
+/****************************** 1279px ******************************/
+@media screen and (max-width: 1279px){
+    /* 사이즈 변환 */
+    
+/****************************** 1020px ******************************/
+@media screen and (max-width: 1020px){
+    /* 사이즈 변환 */
+    #container {height: 110vh;}
+
+    #container .conLeft img {
+        left: 50%;
+        top: 16%;
+        transform: translate(-50%, -16%);
+    }
+
+    #container .conRight .textWrap {
+        width: 50%;
+        top: 80%;
+        left: 40%;
+        transform: translate(-20%, -50%);
+    }
+
+    /* 나타내기 */
+
+    /* 없애기 */
+}
+
+/****************************** 767px ******************************/
+@media screen and (max-width: 767px){
+    /* 사이즈 변환 */
+    
+    /* 나타내기 */
+    /* 없애기 */
+}
+
+/****************************** 640px ******************************/
+@media screen and (max-width: 640px){
+    /* 사이즈 변환 */
+    /* 나타내기 */
+    /* 없애기 */
+}
+
+/****************************** 480px ******************************/
+@media screen and (max-width: 480px){
+    /* 사이즈 변환 */
+    
+    /* 나타내기 */
+    /* 없애기 */
+}
+
+/****************************** 390px ******************************/
+@media screen and (max-width: 390px){
+    /* 사이즈 변환 */
+    
+    /* 나타내기 */
+    /* 없애기 */
+}

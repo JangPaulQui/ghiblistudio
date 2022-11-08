@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STUDIO GHIBLI</title>
-    
-    <script src="js/script.js"></script>
-    <link rel="stylesheet" href="css/style-studio.css">
+    <title>GHIBLI STUDIO</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
     <!-- 1. header -->
@@ -46,37 +46,41 @@
     <!-- 2. #container -->
     <div id="container">
         <div class="innerBox">
-            <div class="contentWrap">
-                <div class="conLeft">
-                    <img src="images/totoro.png" alt="totoro">
-                </div>
-                <div class="conRight">
-                    <div class="textWrap">
-                        <h2>STUDIO GHIBLI</h2>
-                        <p>사명인 지브리(ghibli)는 '사하라 사막에 부는 열풍(熱風)을 가리키는 이탈리아어.
-                            2차대전 당시 이탈리아 군용정찰기에 붙은 명칭이자 마세라티 기블리의 유래이기도 하다.
-                        </p>
-                        <span>
-                            지브리는 자타가 공인하는 비행기 오타쿠 미야자키 하야오가 붙였으며, '애니메이션 업계에 선풍(旋風)을 일으키자'는 의미로 스튜디오 이름을 지었다고 한다. 원래 발음은 기블리(일어로는 '기브리')로 '지브리'는 미야자키가 발음을 혼동하다가 실수로 읽은 명칭에서 유래가 됐다
-                        </span>
-                    </div>
-                </div>
+            <div class="titleWrap">
+                <h2>CONTACT</h2>
+                <p class="description">Ask me anything</p>
             </div>
+            <form id="contact" action="" method="post">
+                <fieldset>
+                  <input placeholder="이름" type="text" tabindex="1" required autofocus>
+                </fieldset>
+                <fieldset>
+                  <input placeholder="이메일" type="email" tabindex="2" required>
+                </fieldset>
+                <fieldset>
+                  <input placeholder="휴대폰 번호" type="tel" tabindex="3" required>
+                </fieldset>
+                <fieldset>
+                  <textarea placeholder="메세지를 작성하세요" tabindex="5" required></textarea>
+                </fieldset>
+                <fieldset>
+                  <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">전 송 하 기</button>
+                </fieldset>
+              </form>
         </div>
     </div>
-    
     <!-- 3. footer -->
     <footer>
         <div class="innerBox">
             <div class="footLeft">
                 <address>
                     <p>서울특별시 금천구 독산로22길 65 (시흥5동)</p>
-                    <p><strong>E-mail:</strong> jangpaulqui@gmail.com</p>
+                    <p><span>E-mail:</span> jangpaulqui@gmail.com</p>
                     <p class="copy">copyrightⓒ 2022 All rights reserved by paul</p>
                 </address>
             </div>
             <ul class="footRight">
-                <li><a href="#"><img src="images/line_icon.png" alt="sns icon line"></a></li>
+                <li><a href="#"><img src="images/line_icon.png" alt="sns icon line"></li>
                 <li><a href="#"><img src="images/twitter_icon.png" alt="sns icon twitter"></a></li>
             </ul>
         </div>

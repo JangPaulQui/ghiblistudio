@@ -7,7 +7,6 @@
     <title>GHIBLI STUDIO</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/style-pilmo.css">
 </head>
 <body>
@@ -15,26 +14,45 @@
     
     <header>
 		<div class="innerBox">
-            <h1 class="logo"><a href="#"><img src="images/home.png" alt="ghibli logo"></a></h1>
+            <h1 class="logo"><a href="./index.html"><img src="images/home.png" alt="ghibli logo"></a></h1>
             <ul id="nav">
                 <li><a href="./stdio.html">STUDIO GHIBLI</a></li>
-                <li><a href="#">PILMOGRAPHY</a></li>
-                <li><a href="#">NEWS</a></li>
-                <li><a href="#">CONTACT</a></li>
+                <li><a href="./pilmo.html">PILMOGRAPHY</a></li>
+                <li><a href="./news.html">NEWS</a></li>
+                <li><a href="./contact.html">CONTACT</a></li>
             </ul>
 			<div class="rightGnb">
                 <a href="#"><img src="images/search-thin-24.png" alt="search button"></a>
             </div>
-            <div class="ham"><a href="#"><img src="images/w_ham.png" alt="hamnurger button"></a></div>
+            <input class="burger-check" type="checkbox" id="burger-check" />
+            <label class="burger-icon" for="burger-check">
+                <span class="burger-sticks"></span>
+            </label>
+            <div class="ham-menu">
+            <div class="back"></div>
+            <ul class="hamGnb">
+                <li><a href="./stdio.html">STUDIO GHIBLI</a></li>
+                <li><a href="./pilmo.html">PILMOGRAPHY</a></li>
+                <li><a href="./news.html">NEWS</a></li>
+                <li><a href="./contact.html">CONTACT</a></li>
+            </ul>               
+            <ul class="ham-icon">
+                <li><a href="#"><img src="images/twitter_icon.png" alt="twitter"></a></li>
+                <li><a href="#"><img src="images/line_icon.png" alt="line"></a></li>
+            </ul>
 		</div>
 	</header>
 
     <!-- 2. #container -->
     <div id="container">
         <div class="innerBox">
+            <div class="titleWrap">
+                <h2>PILMOGRAPHY</h2>
+                <p class="description">Studio Ghibli Animation</p>
+            </div>
             <ul>
                 <li>
-                    <a href="">
+                    <a href="#">
                         <div class="screen">
                             <div class="top">지브리파크</div>
                             <div class="bottom">STUDIO GHIBLI</div>
@@ -43,7 +61,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="#">
                         <div class="screen">
                             <div class="top">바다가 들린다</div>
                             <div class="bottom">STUDIO GHIBLI</div>
@@ -52,7 +70,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="#">
                         <div class="screen">
                             <div class="top">호호케쿄 이웃집 야마다군</div>
                             <div class="bottom">STUDIO GHIBLI</div>
@@ -61,7 +79,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="#">
                         <div class="screen">
                             <div class="top">바람이 서지 않는다</div>
                             <div class="bottom">STUDIO GHIBLI</div>

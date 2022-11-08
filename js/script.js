@@ -105,4 +105,5 @@ window.onload = function () {
         showBanner=0;
         moveSlide();
     }
+    
 }

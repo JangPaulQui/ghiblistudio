@@ -10,6 +10,12 @@
 /* 없애기 */
 .ham {display: none;}
 
+.ham-menu {display: none;}
+
+.burger-check {display: none;}
+
+.burger-icon {display: none;}
+
 /* 1. header */
 header .innerBox {display: flex; justify-content: flex-start; align-items: center ;z-index:999;}
 
@@ -66,10 +72,8 @@ header .rightGnb {position: absolute; right: 0; padding-right:20px;}
     display: block;
     color: #fff;
     text-shadow: 1px 1px 1px #292929;
-    word-break: keep-all;
-    word-wrap: break-word;
     margin-bottom: 2rem;
-    width: 40%;
+    width: 80%;
 }
 
 .banner p .sq {border: 1px solid #fff;}
@@ -80,11 +84,15 @@ header .rightGnb {position: absolute; right: 0; padding-right:20px;}
     width: 163px;
     height: 39px;
     border: 2px solid #fff;
-    background: none;
+    background: rgba(255,255,255,0.3);
     box-shadow: 1px 1px 1px #ccc;
 }
 
-.banner button:hover {background: #fff;}
+.banner button:hover {
+    background: #fff;
+    transition: 0.5s;
+
+}
 
 .banner button:hover a {color: #000; font-weight: bold;}
 
@@ -155,37 +163,149 @@ footer p {color: #fff; font-size: 12px;}
 /****************************** 1279px ******************************/
 @media screen and (max-width: 1279px){
     /* 사이즈 변환 */
-    header .innerBox {padding: 0 2em;}
+header .innerBox {padding: 0 2em;}
 
-    .arrowBtn>.leftBtn {
-        left: 3%; 
+.arrowBtn>.leftBtn {
+    left: 3%; 
+}
+
+.arrowBtn>.rightBtn {
+    right: 3%; 
+}
+
+.ham-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    max-width: 0;
+    transition: 0.5s ease;
+    z-index: 1;
+    background-color: #73D7F4;
     }
 
-    .arrowBtn>.rightBtn {
-        right: 3%; 
+.back {width: 500px;}
+
+.hamGnb {overflow: hidden;}
+
+.hamGnb li {
+    padding: 35px 10px;
+    border-bottom: 1px solid #fff;
     }
 
-    /* #mainBanner {background-position: center; } */
+.hamGnb li:first-child {
+    margin-top: 50px;
+    border-top: 1px solid #fff;
+}
 
-    /* .banner .wordWrap {
-        width: 900px; 
-    } */
+.hamGnb li a {
+    color: #fff;
+    font-size: 2em;
+    font-weight: bold;
+    word-wrap: normal;
+    }
 
-    /* 나타내기 */
-    .ham {display: block; position: absolute; right: 0; padding: 0 2em;}
+.hamGnb li:hover a {
+    color: #292929;
+    transition: all 0.5s;
+    }
 
-    /* 없애기 */
-    header #nav {display: none;}
+    .hamGnb li:hover {
+        background: #fff;
+    }
 
-    header .rightGnb {display: none;}
+.ham-icon {display: flex; column-gap: 10px; justify-content: flex-end; overflow: hidden; margin-right: 10px;}
+
+.ham-icon > li {width: 30px; border: none;}
+
+.ham-icon > li a img {width: 30px;}
+
+.burger-icon {
+cursor: pointer;
+display: inline-block;
+position: absolute;
+z-index: 2;
+padding: 0 2em;
+top: 50%;
+right: 0%;
+user-select: none;
+width: auto;
+margin: 0;
+}
+
+.burger-icon .burger-sticks {
+background: #fff;
+display: block;
+height: 2px;
+position: relative;
+transition: background .2s ease-out;
+width: 25px;
+}
+
+.burger-icon .burger-sticks:before,
+.burger-icon .burger-sticks:after {
+background: #fff;
+content: '';
+display: block;
+height: 100%;
+position: absolute;
+transition: all .2s ease-out;
+width: 100%;
+}
+
+.burger-icon .burger-sticks:before {
+top: 5px;
+}
+
+.burger-icon .burger-sticks:after {
+top: -5px;
+}
+
+.burger-check {
+display: none;
+}
+
+.burger-check:checked~.ham-menu {
+max-width: 60%;
+height: 100vh;
+}
+
+.burger-check:checked~.burger-icon .burger-sticks {
+background: transparent;
+}
+
+.burger-check:checked~.burger-icon .burger-sticks:before {
+transform: rotate(-45deg);
+}
+
+.burger-check:checked~.burger-icon .burger-sticks:after {
+transform: rotate(45deg);
+}
+
+.burger-check:checked~.burger-icon:not(.steps) .burger-sticks:before,
+.burger-check:checked~.burger-icon:not(.steps) .burger-sticks:after {
+top: 0;
+}
+
+/* 나타내기 */
+.ham {display: block; position: absolute; right: 0; padding: 0 2em;}
+
+.ham-menu {display: block;}
+
+/* .burger-check {display: block;} */
+
+.burger-icon {display: block;}
+
+/* 없애기 */
+header #nav {display: none;}
+
+header .rightGnb {display: none;}
 }
 
 /****************************** 1020px ******************************/
 @media screen and (max-width: 1020px){
     /* 사이즈 변환 */
-    /* .banner p {word-break: break-all;} */
 
-    /* .banner .wordWrap {max-width: 100%;} */
     /* 나타내기 */
 
     /* 없애기 */
@@ -194,6 +314,11 @@ footer p {color: #fff; font-size: 12px;}
 /****************************** 767px ******************************/
 @media screen and (max-width: 767px){
     /* 사이즈 변환 */
+    .banner .title {font-size: 3em;}
+
+    .banner p {width: 60%;}
+
+    .banner .wordWrap {margin: 0 auto;}
     /* 나타내기 */
     /* 없애기 */
 }
@@ -201,7 +326,6 @@ footer p {color: #fff; font-size: 12px;}
 /****************************** 640px ******************************/
 @media screen and (max-width: 640px){
     /* 사이즈 변환 */
-    .banner p {width: 60%}
     /* 나타내기 */
     /* 없애기 */
 }
@@ -209,9 +333,19 @@ footer p {color: #fff; font-size: 12px;}
 /****************************** 480px ******************************/
 @media screen and (max-width: 480px){
     /* 사이즈 변환 */
-    .banner .wordWrap {
-        transform: translate(-0%, -50%);
+    .banner .title {
+        font-size: 2.5em;
+        width: 100%;
+        line-height: 36px;
+        padding-bottom: 15px;
     }
+
+    .banner .wordWrap {
+        top: 45%;
+        left: 33%;
+    }
+
+    .banner p {width: 100%;}
     /* 나타내기 */
     /* 없애기 */
 }
@@ -219,6 +353,29 @@ footer p {color: #fff; font-size: 12px;}
 /****************************** 390px ******************************/
 @media screen and (max-width: 390px){
     /* 사이즈 변환 */
+    .banner .title {
+        font-size: 2.2em;
+        line-height: 36px;
+    }
+
+    .banner .wordWrap {
+        top: 45%;
+        left: 25%;
+    }
+
+    .banner p {width: 100%;}
+
+    footer {height: 12vh;}
+
+    footer .footLeft {margin-top: 35px;}
+
+    footer .footRight {column-gap: 2px; margin-top: 35px;}
+
+    footer .footRight img{width: 40px; }
+
+    footer address {font-style: normal;}
+
+    footer p {color: #fff; font-size: 12px;}
     /* 나타내기 */
     /* 없애기 */
 }
